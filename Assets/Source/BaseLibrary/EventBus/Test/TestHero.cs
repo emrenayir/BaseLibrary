@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Source.BaseLibrary
+namespace Source.BaseLibrary.EventBus.Test
 {
     /// <summary>
     /// Will show the usage of event bus 
