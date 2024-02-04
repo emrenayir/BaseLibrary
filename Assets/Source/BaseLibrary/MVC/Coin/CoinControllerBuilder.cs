@@ -4,18 +4,25 @@ namespace Source.BaseLibrary.MVC.Coin
 {
     public class CoinControllerBuilder
     {
+        private ICoinController m_controller;
         private ICoinView m_view;
         private ICoinService m_service;
 
-        public CoinControllerBuilder WithView(ICoinView view)
+        public CoinControllerBuilder( ICoinView a_view
+                                     , ICoinService a_service)
         {
-            m_view = view;
+            m_view = a_view;
+            m_service = a_service;
+        }
+        public CoinControllerBuilder WithView(ICoinView a_view)
+        {
+            m_view = a_view;
             return this;
         }
 
-        public CoinControllerBuilder WithService(ICoinService service)
+        public CoinControllerBuilder WithService(ICoinService a_service)
         {
-            m_service = service;
+            m_service = a_service;
             return this;
         }
 
